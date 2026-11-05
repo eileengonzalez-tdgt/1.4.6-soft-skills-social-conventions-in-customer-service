@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>10 Week English Program | 1.4.6 Social Conventions in Customer Service</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f5f6f7',
+                            100: '#e5e7eb',
+                            200: '#d1d5db',
+                            300: '#b5bac0',
+                            400: '#737a82',
+                            500: '#737a82',
+                            600: '#54595f',
+                            700: '#54595f',
+                            800: '#54595f',
+                            900: '#2a2c2e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+<!-- Custom Styles for Flipcards & Print formatting -->
+<style>
+        /* Helvetica is loaded from the user device or an appropriately licensed webfont. */
+        
+        body {
+            font-family: 'Helvetica Now', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f3f3f3;
+            color: #2a2c2e;
+        }
+
+        /* Perspective for 3D flip card effect */
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+        
+        .transform-style-3d {
+            transform-style: preserve-3d;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .rotate-y-180 {
+            transform: rotateY(180deg);
+        }
+        
+        .backface-hidden {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+
+        /* Print Media Styles */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            .print-only {
+                display: block !important;
+            }
+            body {
+                background: white;
+                color: black;
+            }
+            .step-section {
+                display: block !important;
+                page-break-after: always;
+            }
+            .shadow-lg, .shadow-md, .shadow-sm {
+                box-shadow: none !important;
+                border: 1px solid #cbd5e1;
+            }
+        }
+
+        .step-section {
+            display: none;
+        }
+
+        .step-section.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        :root { --subject: #54595f; --subject-light: #e5e7eb; --ink: #2a2c2e; }
+        /* Master header: subject gray with light-gray controls */
+        .master-header { background:#54595f !important; color:#ffffff !important; }
+        .master-header h1 { color:#ffffff !important; }
+        .master-header .brand-badge { background:#e5e7eb !important; color:#54595f !important; }
+        .master-header .header-meta { color:#eef0f2 !important; }
+        .master-tabs { background:#e5e7eb !important; border-color:#b5bac0 !important; }
+        .master-tabs .nav-tab:not(.bg-brand-600) { color:#2a2c2e !important; }
+        .master-tabs .nav-tab:not(.bg-brand-600):hover { background:#d1d5db !important; color:#2a2c2e !important; }
+        .master-tabs .nav-tab.bg-brand-600 { background:#54595f !important; color:#fff !important; }
+        .master-header button.bg-brand-600 { background:#e5e7eb !important; color:#54595f !important; }
+        .master-header button.bg-brand-600:hover { background:#d1d5db !important; }
+        .key-accuracy-rule { background:#f5f6f7 !important; border-left-color:#737a82 !important; color:#54595f !important; }
+
+        html { font-size: 16px; }
+        body, button, input, textarea, select { font-family: 'Helvetica Now', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+        button { font-size: 15px; font-weight: 600; }
+        main h2 { font-size: 28px; line-height: 1.25; font-weight: 700; }
+        main h3 { font-size: 22px; line-height: 1.3; font-weight: 600; }
+        main p { line-height: 1.6; }
+        main .text-xs { font-size: 14px; }
+        main .text-sm { font-size: 16px; }
+        main .text-base { font-size: 16px; }
+        main .text-lg { font-size: 18px; }
+        main input, main textarea, main select { background: #fff; color: #2a2c2e; font-size: 16px; }
+        main input:focus, main textarea:focus, main select:focus { outline: 2px solid var(--subject); outline-offset: 2px; }
+        .nav-tab { font-size: 14px; }
+        .nav-tab:focus-visible, button:focus-visible { outline: 3px solid #b5bac0; outline-offset: 2px; }
+        .master-bottom-nav { display:flex; align-items:center; justify-content:space-between; gap:16px; max-width:1152px; margin:0 auto 20px; padding:12px 20px; }
+        .master-bottom-nav button { background:var(--subject); color:white; padding:11px 20px; border-radius:9px; }
+        .master-bottom-nav button:disabled { background:#d9d9d9; color:#54595f; cursor:not-allowed; }
+        #section-progress-label { color:#e2e2e2; font-size:12px; margin-left:12px; white-space:nowrap; }
+        @media (max-width: 768px) { main h2 {font-size:25px;} main h3 {font-size:20px;} .master-bottom-nav {padding:12px;} }
+        @media print { .master-bottom-nav {display:none!important;} .step-section {break-after:auto;page-break-after:auto;} }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+<!-- TOP HEADER & NAVIGATION -->
+<header class="master-header bg-[#54595f] text-white sticky top-0 z-50 shadow-md no-print">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<!-- Branding -->
+<div class="flex items-center space-x-3">
+<div class="brand-badge bg-[#e5e7eb] text-[#54595f] font-bold p-2 rounded-lg text-sm tracking-wide">
+                        10W
+                    </div>
+<div>
+<h1 class="font-bold text-lg leading-tight">Lesson 1.4.6: Social Conventions in Customer Service</h1>
+<p class="header-meta text-xs font-medium text-[#eef0f2]">10 Week English Program · Day 4 · Soft Skills · CEFR A2–B1 · 60 min</p>
+</div>
+</div>
+<!-- Print & Export Action -->
+<button class="flex items-center gap-2 bg-brand-600 hover:bg-brand-500 text-white text-xs sm:text-sm font-semibold py-2 px-3 sm:px-4 rounded-lg transition-colors" onclick="window.print()">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="hidden sm:inline">Print / Save PDF</span>
+</button>
+</div>
+</div>
+<!-- Progress Bar -->
+<div aria-label="Lesson section progress" aria-valuemax="7" aria-valuemin="0" aria-valuenow="1" class="w-full bg-[#b5bac0] h-1.5" id="progress-track" role="progressbar">
+<div class="bg-brand-500 h-full transition-all duration-300" id="progress-bar" style="width:14.2857%"></div>
+</div>
+<!-- Navigation Tabs -->
+<nav class="master-tabs bg-[#e5e7eb] border-t border-[#b5bac0] overflow-x-auto">
+<div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 flex space-x-1 sm:space-x-2 py-2 text-xs sm:text-sm whitespace-nowrap">
+<button class="nav-tab px-3 py-1.5 rounded-md font-medium text-white bg-brand-600" id="tab-0" onclick="switchStep(0)">Overview</button>
+<button class="nav-tab px-3 py-1.5 rounded-md font-medium text-slate-300 hover:text-white hover:bg-slate-700" id="tab-1" onclick="switchStep(1)">1. Encounter (10m)</button>
+<button class="nav-tab px-3 py-1.5 rounded-md font-medium text-slate-300 hover:text-white hover:bg-slate-700" id="tab-2" onclick="switchStep(2)">2. Clarify (15m)</button>
+<button class="nav-tab px-3 py-1.5 rounded-md font-medium text-slate-300 hover:text-white hover:bg-slate-700" id="tab-3" onclick="switchStep(3)">3. Remember (10m)</button>
+<button class="nav-tab px-3 py-1.5 rounded-md font-medium text-slate-300 hover:text-white hover:bg-slate-700" id="tab-4" onclick="switchStep(4)">4. Internalize (10m)</button>
+<button class="nav-tab px-3 py-1.5 rounded-md font-medium text-slate-300 hover:text-white hover:bg-slate-700" id="tab-5" onclick="switchStep(5)">5. Fluent Use (15m)</button>
+</div>
+</nav>
+</header>
+<!-- MAIN CONTAINER -->
+<main class="flex-1 max-w-6xl w-full mx-auto p-4 sm:p-6 lg:p-8">
+<section class="step-section active" id="step-0"><div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 mb-6">
+<div class="flex flex-wrap items-center justify-between gap-4 mb-6"><div><span class="inline-block bg-brand-100 text-brand-800 text-xs px-3 py-1 rounded-full font-semibold uppercase tracking-wide">Lesson 1.4.6 Overview</span><h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">Social Conventions in Customer Service</h2></div><div class="text-right"><span class="text-sm text-slate-500 block">Total Duration</span><span class="text-xl font-bold text-slate-800">60 Minutes</span></div></div>
+<p class="text-slate-600 leading-relaxed mb-6">Practice professional courtesy, turn-taking, empathy, and cultural awareness in realistic customer interactions. Learn to respond naturally to difficult situations without making assumptions or unsupported promises.</p>
+<div class="grid md:grid-cols-3 gap-4 mb-8"><div class="p-4 bg-slate-50 rounded-xl border border-slate-200"><div class="text-brand-600 font-bold text-lg mb-1">01. Recognize</div><p class="text-xs text-slate-600">Identify professional and unprofessional customer-service responses.</p></div><div class="p-4 bg-slate-50 rounded-xl border border-slate-200"><div class="text-brand-600 font-bold text-lg mb-1">02. Adapt</div><p class="text-xs text-slate-600">Use polite expressions for empathy, apologies, clarification and turn-taking.</p></div><div class="p-4 bg-slate-50 rounded-xl border border-slate-200"><div class="text-brand-600 font-bold text-lg mb-1">03. Apply</div><p class="text-xs text-slate-600">Manage realistic customer conversations and adjust your tone.</p></div></div>
+<h3 class="font-bold text-slate-800 text-lg mb-3">Lesson Roadmap</h3><div class="overflow-x-auto"><table class="w-full text-left text-xs sm:text-sm border-collapse"><thead><tr class="bg-slate-100 text-slate-700"><th class="p-3 rounded-l-lg">Stage</th><th class="p-3">Focus Area</th><th class="p-3">Time</th><th class="p-3 rounded-r-lg">Activity Output</th></tr></thead><tbody class="divide-y divide-slate-200"><tr><td class="p-3 font-semibold text-slate-800">Encounter</td><td class="p-3 text-slate-600">Professional or Unprofessional?</td><td class="p-3 text-slate-500">10 min</td><td class="p-3 text-slate-600">Discuss 4 customer interactions</td></tr><tr><td class="p-3 font-semibold text-slate-800">Clarify</td><td class="p-3 text-slate-600">Customer Service Etiquette Toolkit</td><td class="p-3 text-slate-500">15 min</td><td class="p-3 text-slate-600">Explore 12 flip cards</td></tr><tr><td class="p-3 font-semibold text-slate-800">Remember</td><td class="p-3 text-slate-600">Choose the Best Agent Response</td><td class="p-3 text-slate-500">10 min</td><td class="p-3 text-slate-600">Check 6 scenarios</td></tr><tr><td class="p-3 font-semibold text-slate-800">Internalize</td><td class="p-3 text-slate-600">Repair the Conversation</td><td class="p-3 text-slate-500">10 min</td><td class="p-3 text-slate-600">Rewrite 3 dialogues</td></tr><tr><td class="p-3 font-semibold text-slate-800">Fluent Use</td><td class="p-3 text-slate-600">Customer Interaction Simulation</td><td class="p-3 text-slate-500">15 min</td><td class="p-3 text-slate-600">2 role-play rounds</td></tr></tbody></table></div><div class="mt-8 text-center"><button class="bg-brand-600 hover:bg-brand-700 text-white font-bold py-3 px-8 rounded-xl text-base shadow-md transition-all" onclick="switchStep(1)">Start Lesson: Encounter →</button></div></div></section>
+<section class="step-section" id="step-1"><div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200"><div class="flex flex-wrap justify-between items-center gap-3 mb-5"><h2 class="text-slate-900">Encounter · Professional or Unprofessional?</h2><span class="text-xs font-semibold bg-slate-100 text-slate-700 rounded-full px-3 py-1">10 min</span></div>
+<p class="mb-4">Read four short customer interactions. Discuss with a partner: <strong>What works, what doesn't, and how could the agent improve?</strong> Remember that tone and context matter.</p>
+<div class="grid md:grid-cols-2 gap-4" id="encounter-cases"></div>
+<div class="mt-5 p-4 bg-slate-50 rounded-xl border border-slate-200"><h3>Discussion prompts</h3><p>Which response acknowledges the customer's concern? Which one sounds dismissive? When might a polite interruption be necessary? How can you avoid assumptions about a customer's background?</p></div>
+</div></section>
+<section class="step-section" id="step-2"><div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200"><div class="flex flex-wrap justify-between items-center gap-3 mb-5"><h2 class="text-slate-900">Clarify · Customer Service Etiquette Toolkit</h2><span class="text-xs font-semibold bg-slate-100 text-slate-700 rounded-full px-3 py-1">15 min</span></div>
+<p class="mb-4">Explore the <strong>12 expression cards</strong>. Select a card to flip it and see a realistic example, then practice saying the expression with natural intonation. Use the filter to focus on a communication skill.</p>
+<div class="flex flex-wrap gap-2 mb-5" id="skill-filters"></div>
+<div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4" id="etiquette-cards"></div>
+<div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mt-5"><h3>Professional judgment</h3><p>Empathy does not mean promising an outcome. Avoid saying “I guarantee it will be fixed today” unless you can confirm that. Acknowledge the concern, ask relevant questions and explain what you can actually do.</p></div>
+</div></section>
+<section class="step-section" id="step-3"><div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200"><div class="flex flex-wrap justify-between items-center gap-3 mb-5"><h2 class="text-slate-900">Remember · Retrieve, Choose &amp; Build</h2><span class="text-xs font-semibold bg-slate-100 text-slate-700 rounded-full px-3 py-1">10 min</span></div>
+<p class="mb-4">Practice the expressions from Clarify in three ways: match language to its purpose, retrieve useful phrases without seeing the full answer, and build professional responses. Complete the tasks independently, then check your answers and discuss any corrections.</p>
+<div class="space-y-6">
+<div class="bg-slate-50 border border-slate-200 rounded-xl p-4"><h3>Part A · Match the Communication Goal (3 min)</h3><p class="text-sm mb-3">Choose the expression that best serves each communication goal. Each expression can be used once.</p><div class="space-y-3" id="recall-match"></div></div>
+<div class="bg-slate-50 border border-slate-200 rounded-xl p-4"><h3>Part B · Complete the Agent's Language (3 min)</h3><p class="text-sm mb-3">Type the missing key phrase from the toolkit. Use the word bank, but pay attention to meaning and grammar.</p><p class="p-3 rounded-lg bg-white border border-slate-200 mb-4"><strong>Word bank:</strong> review · slowly · patience · clarify · repeat · understand</p><div class="space-y-3" id="recall-gaps"></div></div>
+<div class="bg-slate-50 border border-slate-200 rounded-xl p-4"><h3>Part C · Build a Professional Response (4 min)</h3><p class="text-sm mb-3">Choose the best sequence of communication moves for each customer. Then write one natural sentence you would actually say.</p><div class="space-y-4" id="recall-build"></div></div>
+</div>
+<div class="flex gap-3 flex-wrap mt-5"><button class="bg-brand-600 text-white px-5 py-3 rounded-lg font-semibold" onclick="checkResponses()">Check All Activities</button><button class="bg-slate-200 text-slate-800 px-5 py-3 rounded-lg font-semibold" onclick="resetResponses()">Reset Activities</button></div><p aria-live="polite" class="mt-3" id="response-result"></p>
+</div></section>
+<section class="step-section" id="step-4"><div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200"><div class="flex flex-wrap justify-between items-center gap-3 mb-5"><h2 class="text-slate-900">Internalize · Repair the Conversation</h2><span class="text-xs font-semibold bg-slate-100 text-slate-700 rounded-full px-3 py-1">10 min</span></div>
+<p class="mb-4">Work in pairs. Read each exchange, <strong>identify the communication problem</strong>, and rewrite the agent's response. Practice the improved version aloud. Aim for a natural B1 response, not a memorized script.</p>
+<div class="space-y-5" id="repair-cases"></div>
+<div class="flex flex-wrap gap-3 mt-5"><button class="bg-brand-600 text-white px-5 py-3 rounded-lg font-semibold" onclick="reviewRepairs()">Review My Rewrites</button><button class="bg-slate-200 text-slate-800 px-5 py-3 rounded-lg font-semibold" onclick="toggleRepairModels()">Show / Hide Sample Responses</button></div>
+<p aria-live="polite" class="mt-3" id="repair-feedback"></p><div class="hidden mt-4 p-4 bg-slate-50 border border-slate-200 rounded-xl" id="repair-models"></div>
+</div></section>
+<section class="step-section" id="step-5"><div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200"><div class="flex flex-wrap justify-between items-center gap-3 mb-5"><h2 class="text-slate-900">Fluent Use · Customer Interaction Simulation</h2><span class="text-xs font-semibold bg-slate-100 text-slate-700 rounded-full px-3 py-1">15 min</span></div>
+<p class="mb-4">Complete two rounds with a partner. <strong>Round 1:</strong> Student A is the agent and Student B is the customer. <strong>Round 2:</strong> switch roles. Each student should read <strong>only their own card</strong>; hide the card before sharing the screen.</p>
+<div class="flex flex-wrap gap-3 mb-4"><button class="bg-brand-600 text-white px-4 py-3 rounded-lg font-semibold" onclick="setRole('A')">Show Student A Card</button><button class="bg-brand-600 text-white px-4 py-3 rounded-lg font-semibold" onclick="setRole('B')">Show Student B Card</button><button class="bg-slate-200 text-slate-800 px-4 py-3 rounded-lg font-semibold" onclick="hideRole()">Hide Role Card</button></div>
+<label class="font-semibold block mb-3">Scenario <select class="border border-slate-300 rounded-lg bg-white p-2 ml-2" id="role-round" onchange="roleRoundChanged()"><option value="0">Round 1 · Frustrated Customer</option><option value="1">Round 2 · Talkative Customer</option></select></label>
+<div aria-label="Role-play countdown timer" class="rounded-xl border border-slate-200 bg-slate-50 p-4 mb-5" role="group"><div class="flex flex-wrap items-center justify-between gap-3"><div><h3 class="font-bold text-slate-800">Role-play Timer</h3><p class="text-sm text-slate-600">5 minutes per round · Switch roles for round 2</p></div><div aria-label="Time remaining" class="font-bold text-slate-900" id="role-timer-clock" role="timer" style="font-size:34px;line-height:1.15;font-variant-numeric:tabular-nums">05:00</div></div><div class="flex flex-wrap gap-3 mt-4"><button class="bg-brand-600 text-white px-4 py-2 rounded-lg font-semibold" onclick="startRoleTimer()" type="button">Start</button><button class="bg-slate-200 text-slate-800 px-4 py-2 rounded-lg font-semibold" onclick="pauseRoleTimer()" type="button">Pause</button><button class="bg-slate-200 text-slate-800 px-4 py-2 rounded-lg font-semibold" onclick="resetRoleTimer()" type="button">Reset</button></div><p aria-live="polite" class="mt-3 text-sm text-slate-600" id="role-timer-status">Ready for a 5-minute role-play.</p></div><div aria-live="polite" class="border border-slate-200 rounded-xl p-5 bg-slate-50 mb-5" id="role-display"><strong>Role cards are hidden.</strong> Select your own card, read it privately, then hide it.</div>
+<div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-5"><h3>Agent goals</h3><p>Acknowledge the customer's concern, listen without interrupting, ask a relevant question, clarify the next step without promising an unverified outcome, and close professionally.</p></div>
+<div class="grid md:grid-cols-2 gap-4"><label class="block font-semibold">Customer's main concern<textarea class="w-full block mt-2 p-3 border border-slate-300 rounded-lg bg-white" id="role-concern" placeholder="Summarize the customer's issue..." rows="3"></textarea></label><label class="block font-semibold">Clarifying question asked<textarea class="w-full block mt-2 p-3 border border-slate-300 rounded-lg bg-white" id="role-question" placeholder="What did you ask to understand the issue?" rows="3"></textarea></label><label class="block font-semibold">Empathy / apology used<textarea class="w-full block mt-2 p-3 border border-slate-300 rounded-lg bg-white" id="role-empathy" placeholder="Write your professional response..." rows="3"></textarea></label><label class="block font-semibold">Next step and closing<textarea class="w-full block mt-2 p-3 border border-slate-300 rounded-lg bg-white" id="role-next" placeholder="Explain a realistic next step..." rows="3"></textarea></label></div>
+<div class="flex gap-3 flex-wrap mt-5"><button class="bg-brand-600 text-white px-5 py-3 rounded-lg font-semibold" onclick="checkRoleNotes()">Review Interaction Notes</button><button class="bg-slate-200 text-slate-800 px-5 py-3 rounded-lg font-semibold" onclick="clearRoleNotes()">Clear Notes for Next Round</button></div><p aria-live="polite" class="mt-3" id="role-note-feedback"></p>
+<h3 class="mt-6 mb-3">Partner Feedback Checklist</h3><div class="grid md:grid-cols-2 gap-3"><label><input type="checkbox"/> Acknowledged the concern without blaming the customer</label><label><input type="checkbox"/> Allowed the customer to finish speaking</label><label><input type="checkbox"/> Asked a useful clarification question</label><label><input type="checkbox"/> Explained a realistic next step and closed politely</label></div>
+<p class="mt-4 text-sm text-slate-600">These are fictional practice scenarios. No real customer information is needed. To keep role information private, display only one card at a time and hide it before switching viewers.</p>
+</div></section>
+</main>
+<!-- Master bottom navigation: available on every lesson screen -->
+<div aria-label="Lesson navigation" class="master-bottom-nav no-print">
+<button disabled="" id="previous-section" onclick="switchStep(currentStep-1)" type="button">← Back</button>
+<span id="bottom-section-label" style="color:#54595f;font-size:14px;font-weight:500">Overview · 1 of 6</span>
+<button id="next-section" onclick="switchStep(currentStep+1)" type="button">Next →</button>
+</div>
+<!-- FOOTER -->
+<footer class="bg-[#2a2c2e] border-t border-[#54595f] text-slate-400 text-xs py-6 text-center no-print mt-auto">
+<div class="max-w-7xl mx-auto px-4">
+<p>10 Week English Program | Lesson 1.1.6: Social Conventions in Customer Service (CEFR A2–B1)</p>
+<p class="text-slate-500 text-[10px] mt-1">Designed for interactive oral fluency and instructional efficiency.</p>
+</div>
+</footer>
+<!-- JAVASCRIPT LOGIC -->
+<script>
+let currentStep = 0;
+        function switchStep(stepIndex) {
+            if (stepIndex < 0 || stepIndex > 5) return;
+            currentStep = stepIndex;
+            const steps = document.querySelectorAll('.step-section');
+            const tabs = document.querySelectorAll('.nav-tab');
+
+            steps.forEach((step, idx) => {
+                if (idx === stepIndex) {
+                    step.classList.add('active');
+                } else {
+                    step.classList.remove('active');
+                }
+            });
+
+            tabs.forEach((tab, idx) => {
+                if (idx === stepIndex) {
+                    tab.classList.remove('text-slate-300', 'hover:bg-slate-700');
+                    tab.classList.add('text-white', 'bg-brand-600');
+                    tab.setAttribute('aria-current', 'step');
+                } else {
+                    tab.classList.remove('text-white', 'bg-brand-600');
+                    tab.classList.add('text-slate-300', 'hover:bg-slate-700');
+                    tab.removeAttribute('aria-current');
+                }
+            });
+
+            // Update Progress Bar
+            const progress = ((stepIndex + 1) / steps.length) * 100;
+            document.getElementById('progress-bar').style.width = `${progress}%`;
+            document.getElementById('progress-track').setAttribute('aria-valuenow', String(stepIndex+1));
+            document.getElementById('previous-section').disabled = stepIndex === 0;
+            document.getElementById('next-section').disabled = stepIndex === steps.length-1;
+            document.getElementById('next-section').textContent = stepIndex === steps.length-1 ? 'Completed ✓' : 'Next →';
+            const sectionName = tabs[stepIndex].textContent.trim();
+            document.getElementById('bottom-section-label').textContent = `${sectionName} · ${stepIndex+1} of ${steps.length}`;
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+
+
+const $=id=>document.getElementById(id);
+const esc=t=>String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const encounters=[
+["Long wait","Customer: “I've been waiting for 20 minutes!”","Agent: “Well, we're very busy today.”","This response explains the situation but dismisses the customer's frustration. Acknowledge the wait before explaining next steps."],
+["A missing payment","Customer: “I made the payment yesterday, but it isn't showing.”","Agent: “I understand why that would be concerning. Could you confirm which payment method you used so I can check the details?”","The agent acknowledges the concern, listens to the detail already provided (yesterday), and asks a new, relevant follow-up question."],
+["An interruption","Customer: “I tried restarting the app, and then…”","Agent: “Stop. I already know what the problem is.”","The agent interrupts and assumes too much. Let the customer finish and clarify details."],
+["Different communication styles","Customer: “Could you please speak a little more slowly?”","Agent: “Of course. I'll slow down. Please let me know if you'd like me to repeat anything.”","The agent adapts respectfully without making assumptions about the customer's abilities or background."]
+];
+const skills=[
+["Courtesy","Professional greeting","Thank you for contacting us. How may I assist you today?","Use a warm, clear opening without excessive formality."],
+["Courtesy","Professional closing","Is there anything else I can clarify before we finish?","Check for outstanding questions without rushing."],
+["Turn-taking","Polite clarification","May I clarify one detail before we continue?","Wait for a natural pause; explain why you need to interrupt."],
+["Turn-taking","Redirecting respectfully","To make sure I help you with the main issue, could we return to the payment question?","Acknowledge what was said before redirecting."],
+["Turn-taking","Active listening","So, if I understand correctly, the issue started yesterday. Is that right?","Paraphrase to confirm rather than assume."],
+["Empathy","Recognizing frustration","I understand why that would be frustrating.","Show you heard the concern; avoid sounding scripted."],
+["Empathy","Appreciating patience","Thank you for explaining that. I appreciate your patience.","Use after the customer has taken time to clarify."],
+["Apologies","Apologizing appropriately","I'm sorry you've had this experience. Let me check the details.","Apologize for the experience without claiming an unverified cause."],
+["Apologies","Taking a realistic next step","Here's what I can check right now.","Offer only actions you can actually perform."],
+["Cultural awareness","Avoiding assumptions","How would you prefer me to address you?","Don't infer names, titles or preferences."],
+["Cultural awareness","Adapting your pace","Of course. I'll speak more slowly and explain each step.","Respect communication preferences."],
+["Cultural awareness","Checking understanding","Would you like me to repeat or explain any part of that?","Invite clarification without making the customer feel at fault."]
+];
+const questions=[
+{q:"A customer says: “I have called three times about this issue.”",opts:["That's not my problem.","I understand this has taken several calls. Let me review what's happened so far.","You need to be more patient."],answer:1,why:"It acknowledges the repeated effort and moves toward understanding the issue."},
+{q:"The customer is explaining a problem, but you need one key detail.",opts:["Interrupt immediately: “What's your account number?”","Wait for a pause, then say: “May I clarify one detail?”","Tell them to start again."],answer:1,why:"Polite turn-taking respects the customer and still allows the agent to gather information."},
+{q:"A customer asks you to guarantee a refund today, but you cannot confirm eligibility.",opts:["I guarantee you'll receive it today.","I can't do anything. Goodbye.","I can review the available options and explain the next step, but I can't confirm a refund yet."],answer:2,why:"It is transparent and avoids an unsupported promise."},
+{q:"A customer says they cannot follow your explanation.",opts:["This is very simple.","Of course. I'll explain it more slowly, step by step.","Ask someone else to help you."],answer:1,why:"The agent adapts the communication style without judgment."},
+{q:"A customer sounds upset about a service interruption.",opts:["At least you can take a break from the internet.","I understand this is inconvenient. Could you tell me when the interruption began?","You are overreacting."],answer:1,why:"Empathy and a useful question are more appropriate than humor or dismissiveness."},
+{q:"A talkative customer moves away from the original issue.",opts:["Stop talking and listen to me.","I appreciate the context. To make sure we resolve the main concern, could I ask about the order date?","Just tell me the important part."],answer:1,why:"It redirects politely and asks for a relevant detail."}
+];
+const repairs=[
+{title:"1 · Interrupting the customer",dialogue:"Customer: “I updated my information, but then I received another email saying…”<br>Agent: “Stop. Just give me your account number.”",issue:"The agent interrupts abruptly and sounds demanding.",model:"“I'm sorry to interrupt. May I confirm one detail so I can follow what happened next?”"},
+{title:"2 · Defensive response to a complaint",dialogue:"Customer: “Your team gave me the wrong instructions yesterday.”<br>Agent: “Well, that wasn't me, so I can't help you.”",issue:"The agent becomes defensive instead of acknowledging the experience.",model:"“I'm sorry the instructions were confusing. Let me review the information with you and see what we can clarify.”"},
+{title:"3 · Inappropriate humor and assumptions",dialogue:"Customer: “I'm having trouble understanding the steps.”<br>Agent: “Haha, my grandma could do this. It's easy!”",issue:"The joke is disrespectful and assumes the customer should understand.",model:"“No problem. We can go through the steps one at a time. Please tell me if you'd like me to repeat anything.”"}
+];
+const roleRounds=[
+{A:{role:"AGENT",brief:"You are a billing-support agent. The customer has contacted support several times about the same charge. Open the conversation professionally and let them explain the problem. Acknowledge their frustration, ask what the previous agents told them, and clarify when the charge appeared. Offer to review the billing history and explain what you can check next. Do not guarantee a refund or immediate resolution.",goal:"Use empathy, two relevant questions, a realistic next step and a courteous closing."},B:{role:"CUSTOMER",brief:"You noticed an unexpected charge and have already called support three times. You are worried it may happen again, so you sound frustrated but remain willing to cooperate. Start with: “I've called three times already and nobody has fixed this.” If asked, explain that the charge appeared last week and the previous agent told you to wait, but you have not received an update. Ask what will happen next.",goal:"Express your concern naturally, share details when asked and ask one follow-up question."}},
+{A:{role:"CUSTOMER",brief:"Your delivery has not arrived. You are annoyed and tend to give too much background about previous orders and unrelated delivery experiences. Start with: “My order hasn't arrived, and this reminds me of what happened last month…” If the agent politely brings you back to the current order, explain that it was expected on Tuesday. Ask how you can find out its current status.",goal:"Speak naturally, include a little extra background, then cooperate when redirected respectfully."},B:{role:"AGENT",brief:"You work in delivery support. The customer is upset about a late order and keeps moving into unrelated stories. Begin with a professional greeting and allow them to explain. Acknowledge the delay, then use a polite transition to return to the current order. Ask for the expected delivery date and explain that you can check the tracking information. Do not promise a specific delivery date unless it is confirmed.",goal:"Demonstrate active listening, one respectful redirection, a useful question and a clear closing."}}
+];
+function renderEncounter(){
+ $('encounter-cases').innerHTML=encounters.map((x,i)=>`<div class="border border-slate-200 rounded-xl p-4"><span class="text-xs font-bold text-brand-600">CASE ${i+1} · ${esc(x[0])}</span><p class="mt-3"><b>${esc(x[1])}</b></p><p class="mt-2">${esc(x[2])}</p><details class="mt-3 border-t border-slate-200 pt-3"><summary class="cursor-pointer font-semibold text-brand-600">Discuss and reveal feedback</summary><p class="mt-2">${esc(x[3])}</p></details></div>`).join('');
+}
+let skillFilter='All';
+function renderSkills(){
+ let filters=['All',...new Set(skills.map(x=>x[0]))];
+ $('skill-filters').innerHTML=filters.map(f=>`<button type="button" data-filter="${esc(f)}" class="px-3 py-2 rounded-full border ${f===skillFilter?'bg-brand-600 text-white':'bg-white text-slate-800 border-slate-300'}">${esc(f)}</button>`).join('');
+ $('skill-filters').querySelectorAll('button').forEach(b=>b.onclick=()=>{skillFilter=b.dataset.filter;renderSkills()});
+ $('etiquette-cards').innerHTML=skills.map((x,i)=>({x,i})).filter(o=>skillFilter==='All'||o.x[0]===skillFilter).map(({x,i})=>`<button type="button" data-card="${i}" aria-expanded="false" class="flip-card text-left border border-slate-200 rounded-xl p-5 bg-slate-50 hover:border-slate-400"><span class="text-xs uppercase tracking-wide font-bold text-brand-600">${esc(x[0])}</span><h3 class="mt-2">${esc(x[1])}</h3><p class="text-sm text-slate-600 mt-3">Select to reveal an example.</p></button>`).join('');
+ $('etiquette-cards').querySelectorAll('button').forEach(b=>b.onclick=()=>{let x=skills[+b.dataset.card],open=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!open));b.innerHTML=open?`<span class="text-xs uppercase font-bold text-brand-600">${esc(x[0])}</span><h3 class="mt-2">${esc(x[1])}</h3><p class="text-sm mt-3">Select to reveal an example.</p>`:`<span class="text-xs uppercase font-bold text-brand-600">${esc(x[0])}</span><h3 class="mt-2">${esc(x[1])}</h3><p class="mt-3 font-semibold">“${esc(x[2])}”</p><p class="mt-2 text-sm text-slate-600">${esc(x[3])}</p><p class="mt-3 text-xs">Select to flip back.</p>`;});
+}
+
+const recallMatches=[
+ {goal:"Politely ask for a detail before continuing",correct:"May I clarify one detail before we continue?",wrong:["I guarantee this will be fixed today.","That's not my problem."]},
+ {goal:"Acknowledge that a problem is frustrating",correct:"I understand why that would be frustrating.",wrong:["You should have called sooner.","Please calm down."]},
+ {goal:"Respectfully return to the main issue",correct:"To make sure I help you with the main issue, could we return to the payment question?",wrong:["You're talking too much.","I'm going to ignore that."]},
+ {goal:"Confirm that you understood the customer",correct:"So, if I understand correctly, the issue started yesterday. Is that right?",wrong:["You already explained this.","I know exactly what happened."]},
+ {goal:"Offer a realistic next step",correct:"Here's what I can check right now.",wrong:["I promise you'll receive a refund.","There's nothing to discuss."]},
+ {goal:"Adapt when the customer needs more time",correct:"Of course. I'll speak more slowly and explain each step.",wrong:["This is easy to understand.","Ask someone else."]}
+];
+const recallGaps=[
+ {before:"May I ",after:" one detail before we continue?",answer:"clarify",tip:"Use a verb that means making information clearer."},
+ {before:"Thank you for explaining that. I appreciate your ",after:".",answer:"patience",tip:"Use the noun for staying calm while waiting."},
+ {before:"I ",after:" why that would be frustrating.",answer:"understand",tip:"Use a verb that acknowledges the customer's experience."},
+ {before:"Of course. I'll speak more ",after:" and explain each step.",answer:"slowly",tip:"Use the adverb that describes a reduced speaking pace."},
+ {before:"Would you like me to ",after:" or explain any part of that?",answer:"repeat",tip:"Use a verb meaning to say something again."},
+ {before:"Let me ",after:" the information with you.",answer:"review",tip:"Use a verb meaning to examine the details."}
+];
+const recallBuild=[
+ {context:"The customer has called three times about an unresolved issue.",choices:["Ask for details → Acknowledge frustration → Promise a fix","Acknowledge frustration → Clarify what happened → Offer a realistic next step","Tell the customer to wait → End the call → Check the issue later"],answer:1,example:"I understand this has taken several calls. Could you tell me what the last agent advised so I can review the next step?"},
+ {context:"A customer is speaking quickly and you missed an important detail.",choices:["Pretend you understood → Give instructions","Interrupt sharply → Ask the customer to start over","Wait for a pause → Politely ask for repetition → Confirm what you heard"],answer:2,example:"I'm sorry, could you repeat the date one more time? I want to make sure I have it right."}
+];
+function renderQuestions(){
+ $('recall-match').innerHTML=recallMatches.map((x,i)=>{
+  let choices=[x.correct,...x.wrong].sort((a,b)=>((a.length+i*7)%5)-((b.length+i*7)%5));
+  return `<label class="block"><span class="font-semibold">${i+1}. ${esc(x.goal)}</span><select id="recall-match-${i}" class="block mt-1 w-full p-3 bg-white border border-slate-300 rounded-lg"><option value="">Choose an expression...</option>${choices.map(y=>`<option value="${esc(y)}">${esc(y)}</option>`).join('')}</select><span id="recall-match-feedback-${i}" class="block text-sm mt-1" aria-live="polite"></span></label>`;
+ }).join('');
+ $('recall-gaps').innerHTML=recallGaps.map((x,i)=>`<label class="block"><span class="font-semibold">${i+1}. ${esc(x.before)}</span><input id="recall-gap-${i}" class="inline-block w-36 p-2 mx-1 bg-white border border-slate-300 rounded-lg" placeholder="Type a word" autocomplete="off"/><span class="font-semibold">${esc(x.after)}</span><span id="recall-gap-feedback-${i}" class="block text-sm mt-1" aria-live="polite"></span></label>`).join('');
+ $('recall-build').innerHTML=recallBuild.map((x,i)=>`<div class="border border-slate-200 rounded-xl p-3 bg-white"><p class="font-semibold mb-2">${i+1}. ${esc(x.context)}</p><div class="space-y-2">${x.choices.map((y,j)=>`<label class="flex gap-2 items-start"><input class="mt-1" type="radio" name="recall-build-${i}" value="${j}"/><span>${esc(y)}</span></label>`).join('')}</div><label class="block font-semibold mt-3">Write your own professional response<textarea id="recall-build-text-${i}" rows="2" class="block w-full mt-1 p-3 bg-white border border-slate-300 rounded-lg" placeholder="Write what you would say to the customer..."></textarea></label><p id="recall-build-feedback-${i}" class="text-sm mt-2" aria-live="polite"></p></div>`).join('');
+}
+function checkResponses(){
+ let correct=0,total=recallMatches.length+recallGaps.length+recallBuild.length;
+ recallMatches.forEach((x,i)=>{
+  let ok=$('recall-match-'+i).value===x.correct;if(ok)correct++;
+  $('recall-match-feedback-'+i).textContent=ok?'Correct.':`Review: ${x.correct}`;
+ });
+ recallGaps.forEach((x,i)=>{
+  let ok=$('recall-gap-'+i).value.trim().toLowerCase().replace(/[.!?]/g,'')===x.answer;if(ok)correct++;
+  $('recall-gap-feedback-'+i).textContent=ok?'Correct.':`Hint: ${x.tip} Answer: ${x.answer}.`;
+ });
+ recallBuild.forEach((x,i)=>{
+  let chosen=document.querySelector(`input[name="recall-build-${i}"]:checked`),ok=chosen&&+chosen.value===x.answer;
+  if(ok)correct++;
+  let written=$('recall-build-text-'+i).value.trim();
+  $('recall-build-feedback-'+i).textContent=`${ok?'Correct sequence.':'Review the sequence.'} Suggested sequence: ${x.choices[x.answer]}. ${written?'Compare your sentence with the model: ':'Write your own sentence, then compare with the model: '}${x.example}`;
+ });
+ $('response-result').textContent=`${correct} of ${total} automatically checked answers correct. Your two written responses require partner or trainer feedback for clarity, empathy and professionalism.`;
+}
+function resetResponses(){renderQuestions();$('response-result').textContent='';}
+function renderRepairs(){
+ $('repair-cases').innerHTML=repairs.map((x,i)=>`<div class="border border-slate-200 rounded-xl p-4"><h3 class="mb-2">${esc(x.title)}</h3><p class="bg-slate-50 rounded-lg p-3">${x.dialogue}</p><label class="block font-semibold mt-3">What went wrong?<textarea id="repair-issue-${i}" rows="2" class="w-full block mt-1 p-3 bg-white border border-slate-300 rounded-lg" placeholder="Identify the communication problem..."></textarea></label><label class="block font-semibold mt-3">Rewrite the agent's response<textarea id="repair-rewrite-${i}" rows="3" class="w-full block mt-1 p-3 bg-white border border-slate-300 rounded-lg" placeholder="Write a natural, professional response..."></textarea></label></div>`).join('');
+ $('repair-models').innerHTML=repairs.map((x,i)=>`<p class="mb-3"><b>${i+1}. Issue:</b> ${esc(x.issue)}<br><b>Sample response:</b> ${esc(x.model)}</p>`).join('');
+}
+function reviewRepairs(){let count=repairs.filter((_,i)=>$('repair-issue-'+i).value.trim()&&$('repair-rewrite-'+i).value.trim()).length;$('repair-feedback').textContent=`${count} of 3 dialogue repairs completed. Compare your rewrites with the samples and discuss tone, empathy and clarity. This checks completion, not the quality of your wording.`;}
+function toggleRepairModels(){$('repair-models').classList.toggle('hidden');}
+function hideRole(){$('role-display').innerHTML='<strong>Role cards are hidden.</strong> Select your own card, read it privately, then hide it before sharing the screen.';}
+function setRole(which){let r=roleRounds[+$('role-round').value][which];$('role-display').innerHTML=`<h3>Student ${which} · ${esc(r.role)} (private card)</h3><p class="mt-2">${esc(r.brief)}</p><p class="mt-3"><b>Your goal:</b> ${esc(r.goal)}</p><p class="text-sm text-slate-600 mt-3">Hide this card before your partner views the screen.</p>`;}
+function roleRoundChanged(){hideRole();clearRoleNotes();resetRoleTimer();}
+function clearRoleNotes(){['concern','question','empathy','next'].forEach(k=>$('role-'+k).value='');$('role-note-feedback').textContent='';}
+function checkRoleNotes(){let n=['concern','question','empathy','next'].filter(k=>$('role-'+k).value.trim()).length;$('role-note-feedback').textContent=`${n} of 4 interaction notes completed. Your partner should assess whether the response was professional, relevant and realistic.`;}
+document.addEventListener('DOMContentLoaded',()=>{renderEncounter();renderSkills();renderQuestions();renderRepairs();hideRole();});
+
+// Five-minute timer for each role-play round.
+const ROLE_TIMER_SECONDS=300;
+let roleTimerRemaining=ROLE_TIMER_SECONDS;
+let roleTimerInterval=null;
+function paintRoleTimer(){
+ const m=String(Math.floor(roleTimerRemaining/60)).padStart(2,'0');
+ const sec=String(roleTimerRemaining%60).padStart(2,'0');
+ const clock=document.getElementById('role-timer-clock');
+ if(clock)clock.textContent=m+':'+sec;
+ const status=document.getElementById('role-timer-status');
+ if(status&&roleTimerRemaining===0)status.textContent='Time is up. Finish the conversation and exchange feedback.';
+}
+function pauseRoleTimer(){if(roleTimerInterval!==null){clearInterval(roleTimerInterval);roleTimerInterval=null;}const status=document.getElementById('role-timer-status');if(status&&roleTimerRemaining>0)status.textContent='Timer paused.';}
+function startRoleTimer(){
+ if(roleTimerInterval!==null||roleTimerRemaining===0)return;
+ document.getElementById('role-timer-status').textContent='Role-play in progress.';
+ roleTimerInterval=setInterval(()=>{
+  roleTimerRemaining=Math.max(0,roleTimerRemaining-1);paintRoleTimer();
+  if(roleTimerRemaining===0){clearInterval(roleTimerInterval);roleTimerInterval=null;}
+ },1000);
+}
+function resetRoleTimer(){pauseRoleTimer();roleTimerRemaining=ROLE_TIMER_SECONDS;paintRoleTimer();document.getElementById('role-timer-status').textContent='Ready for a 5-minute role-play.';}
+</script>
+</body>
+</html>
